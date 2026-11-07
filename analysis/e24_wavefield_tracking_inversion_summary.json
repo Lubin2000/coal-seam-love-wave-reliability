@@ -1,0 +1,692 @@
+{
+  "settings": {
+    "frequencies_hz": [
+      100.0,
+      120.0,
+      140.0,
+      160.0,
+      180.0,
+      200.0,
+      220.0,
+      240.0,
+      260.0,
+      280.0,
+      300.0,
+      320.0,
+      340.0,
+      360.0,
+      380.0,
+      400.0,
+      420.0,
+      440.0,
+      460.0,
+      480.0,
+      500.0,
+      520.0,
+      540.0,
+      560.0
+    ]
+  },
+  "cases": [
+    {
+      "case": "thin_1p8m",
+      "h_true": 1.8,
+      "beta_true": 1120.0,
+      "image": "analytical_image",
+      "method": "independent_peaks",
+      "observation_count": 67,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 95.45454545454545,
+        "mode1": 100.0,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 21,
+        "mode1": 4,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 22,
+        "mode1": 4,
+        "mode2": 0
+      },
+      "median_pick_error_mps": {
+        "mode0": 3.131003709694369,
+        "mode1": 3.9542478372388814,
+        "mode2": null
+      },
+      "false_pick_percent": 62.6865671641791
+    },
+    {
+      "case": "thin_1p8m",
+      "h_true": 1.8,
+      "beta_true": 1120.0,
+      "image": "analytical_image",
+      "method": "greedy_tracking",
+      "observation_count": 37,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 95.45454545454545,
+        "mode1": 100.0,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 21,
+        "mode1": 4,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 22,
+        "mode1": 4,
+        "mode2": 0
+      },
+      "median_pick_error_mps": {
+        "mode0": 3.131003709694369,
+        "mode1": 3.9542478372388814,
+        "mode2": null
+      },
+      "false_pick_percent": 32.432432432432435
+    },
+    {
+      "case": "thin_1p8m",
+      "h_true": 1.8,
+      "beta_true": 1120.0,
+      "image": "analytical_image",
+      "method": "global_tracking",
+      "observation_count": 69,
+      "h_est": 5.5,
+      "beta_est": 1296.6234087433595,
+      "h_error": 3.7,
+      "beta_error": 176.6234087433595,
+      "mode_detection_percent": {
+        "mode0": 100.0,
+        "mode1": 100.0,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 22,
+        "mode1": 4,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 22,
+        "mode1": 4,
+        "mode2": 0
+      },
+      "median_pick_error_mps": {
+        "mode0": 3.1443044328665337,
+        "mode1": 3.9542478372388814,
+        "mode2": null
+      },
+      "false_pick_percent": 59.375
+    },
+    {
+      "case": "thin_1p8m",
+      "h_true": 1.8,
+      "beta_true": 1120.0,
+      "image": "finite_difference_image",
+      "method": "independent_peaks",
+      "observation_count": 59,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 59.09090909090909,
+        "mode1": 0.0,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 13,
+        "mode1": 0,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 22,
+        "mode1": 4,
+        "mode2": 0
+      },
+      "median_pick_error_mps": {
+        "mode0": 63.399418119622624,
+        "mode1": null,
+        "mode2": null
+      },
+      "false_pick_percent": 77.96610169491525
+    },
+    {
+      "case": "thin_1p8m",
+      "h_true": 1.8,
+      "beta_true": 1120.0,
+      "image": "finite_difference_image",
+      "method": "greedy_tracking",
+      "observation_count": 41,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 13.636363636363637,
+        "mode1": 0.0,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 3,
+        "mode1": 0,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 22,
+        "mode1": 4,
+        "mode2": 0
+      },
+      "median_pick_error_mps": {
+        "mode0": 141.9572245798072,
+        "mode1": null,
+        "mode2": null
+      },
+      "false_pick_percent": 92.6829268292683
+    },
+    {
+      "case": "thin_1p8m",
+      "h_true": 1.8,
+      "beta_true": 1120.0,
+      "image": "finite_difference_image",
+      "method": "global_tracking",
+      "observation_count": 51,
+      "h_est": 5.5,
+      "beta_est": 1210.51023171875,
+      "h_error": 3.7,
+      "beta_error": 90.51023171874999,
+      "mode_detection_percent": {
+        "mode0": 9.090909090909092,
+        "mode1": 0.0,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 2,
+        "mode1": 0,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 22,
+        "mode1": 4,
+        "mode2": 0
+      },
+      "median_pick_error_mps": {
+        "mode0": 10.885455953877226,
+        "mode1": null,
+        "mode2": null
+      },
+      "false_pick_percent": 94.28571428571429
+    },
+    {
+      "case": "medium_2p8m",
+      "h_true": 2.8,
+      "beta_true": 1120.0,
+      "image": "analytical_image",
+      "method": "independent_peaks",
+      "observation_count": 70,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 100.0,
+        "mode1": 100.0,
+        "mode2": 100.0
+      },
+      "mode_detected": {
+        "mode0": 24,
+        "mode1": 13,
+        "mode2": 2
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 13,
+        "mode2": 2
+      },
+      "median_pick_error_mps": {
+        "mode0": 2.273026371369042,
+        "mode1": 3.651204307230273,
+        "mode2": 6.379072475263911
+      },
+      "false_pick_percent": 44.285714285714285
+    },
+    {
+      "case": "medium_2p8m",
+      "h_true": 2.8,
+      "beta_true": 1120.0,
+      "image": "analytical_image",
+      "method": "greedy_tracking",
+      "observation_count": 33,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 87.5,
+        "mode1": 69.23076923076923,
+        "mode2": 100.0
+      },
+      "mode_detected": {
+        "mode0": 21,
+        "mode1": 9,
+        "mode2": 2
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 13,
+        "mode2": 2
+      },
+      "median_pick_error_mps": {
+        "mode0": 2.8648958559574567,
+        "mode1": 3.651204307230273,
+        "mode2": 6.379072475263911
+      },
+      "false_pick_percent": 3.0303030303030303
+    },
+    {
+      "case": "medium_2p8m",
+      "h_true": 2.8,
+      "beta_true": 1120.0,
+      "image": "analytical_image",
+      "method": "global_tracking",
+      "observation_count": 61,
+      "h_est": 5.00417172265625,
+      "beta_est": 1220.3835417734376,
+      "h_error": 2.20417172265625,
+      "beta_error": 100.38354177343763,
+      "mode_detection_percent": {
+        "mode0": 66.66666666666667,
+        "mode1": 100.0,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 16,
+        "mode1": 13,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 13,
+        "mode2": 2
+      },
+      "median_pick_error_mps": {
+        "mode0": 2.721039128625307,
+        "mode1": 3.651204307230273,
+        "mode2": null
+      },
+      "false_pick_percent": 42.0
+    },
+    {
+      "case": "medium_2p8m",
+      "h_true": 2.8,
+      "beta_true": 1120.0,
+      "image": "finite_difference_image",
+      "method": "independent_peaks",
+      "observation_count": 64,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 54.166666666666664,
+        "mode1": 15.384615384615385,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 13,
+        "mode1": 2,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 13,
+        "mode2": 2
+      },
+      "median_pick_error_mps": {
+        "mode0": 39.803061813742715,
+        "mode1": 7.71571588025563,
+        "mode2": null
+      },
+      "false_pick_percent": 76.5625
+    },
+    {
+      "case": "medium_2p8m",
+      "h_true": 2.8,
+      "beta_true": 1120.0,
+      "image": "finite_difference_image",
+      "method": "greedy_tracking",
+      "observation_count": 10,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 4.166666666666667,
+        "mode1": 0.0,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 1,
+        "mode1": 0,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 13,
+        "mode2": 2
+      },
+      "median_pick_error_mps": {
+        "mode0": 122.56716254507592,
+        "mode1": null,
+        "mode2": null
+      },
+      "false_pick_percent": 90.0
+    },
+    {
+      "case": "medium_2p8m",
+      "h_true": 2.8,
+      "beta_true": 1120.0,
+      "image": "finite_difference_image",
+      "method": "global_tracking",
+      "observation_count": 52,
+      "h_est": 4.1499999999999995,
+      "beta_est": 1165.682548186328,
+      "h_error": 1.3499999999999996,
+      "beta_error": 45.68254818632795,
+      "mode_detection_percent": {
+        "mode0": 33.333333333333336,
+        "mode1": 15.384615384615385,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 8,
+        "mode1": 2,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 13,
+        "mode2": 2
+      },
+      "median_pick_error_mps": {
+        "mode0": 36.06066496167341,
+        "mode1": 7.71571588025563,
+        "mode2": null
+      },
+      "false_pick_percent": 77.77777777777777
+    },
+    {
+      "case": "thick_3p8m",
+      "h_true": 3.8,
+      "beta_true": 1120.0,
+      "image": "analytical_image",
+      "method": "independent_peaks",
+      "observation_count": 71,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 100.0,
+        "mode1": 100.0,
+        "mode2": 77.77777777777777
+      },
+      "mode_detected": {
+        "mode0": 24,
+        "mode1": 17,
+        "mode2": 7
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 17,
+        "mode2": 9
+      },
+      "median_pick_error_mps": {
+        "mode0": 2.889091269404389,
+        "mode1": 4.870746033321666,
+        "mode2": 1.9853765689513239
+      },
+      "false_pick_percent": 32.394366197183096
+    },
+    {
+      "case": "thick_3p8m",
+      "h_true": 3.8,
+      "beta_true": 1120.0,
+      "image": "analytical_image",
+      "method": "greedy_tracking",
+      "observation_count": 43,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 87.5,
+        "mode1": 94.11764705882354,
+        "mode2": 55.55555555555556
+      },
+      "mode_detected": {
+        "mode0": 21,
+        "mode1": 16,
+        "mode2": 5
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 17,
+        "mode2": 9
+      },
+      "median_pick_error_mps": {
+        "mode0": 3.1470954859137237,
+        "mode1": 5.36647839277407,
+        "mode2": 1.0571474760663477
+      },
+      "false_pick_percent": 2.3255813953488373
+    },
+    {
+      "case": "thick_3p8m",
+      "h_true": 3.8,
+      "beta_true": 1120.0,
+      "image": "analytical_image",
+      "method": "global_tracking",
+      "observation_count": 65,
+      "h_est": 5.5,
+      "beta_est": 1164.8079350546877,
+      "h_error": 1.7000000000000002,
+      "beta_error": 44.80793505468773,
+      "mode_detection_percent": {
+        "mode0": 79.16666666666667,
+        "mode1": 100.0,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 19,
+        "mode1": 17,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 17,
+        "mode2": 9
+      },
+      "median_pick_error_mps": {
+        "mode0": 3.1863906138710263,
+        "mode1": 4.870746033321666,
+        "mode2": null
+      },
+      "false_pick_percent": 37.93103448275862
+    },
+    {
+      "case": "thick_3p8m",
+      "h_true": 3.8,
+      "beta_true": 1120.0,
+      "image": "finite_difference_image",
+      "method": "independent_peaks",
+      "observation_count": 65,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 29.166666666666668,
+        "mode1": 11.764705882352942,
+        "mode2": 11.11111111111111
+      },
+      "mode_detected": {
+        "mode0": 7,
+        "mode1": 2,
+        "mode2": 1
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 17,
+        "mode2": 9
+      },
+      "median_pick_error_mps": {
+        "mode0": 121.94828715300537,
+        "mode1": 21.717988000134596,
+        "mode2": 13.217487392862495
+      },
+      "false_pick_percent": 84.61538461538461
+    },
+    {
+      "case": "thick_3p8m",
+      "h_true": 3.8,
+      "beta_true": 1120.0,
+      "image": "finite_difference_image",
+      "method": "greedy_tracking",
+      "observation_count": 19,
+      "h_est": NaN,
+      "beta_est": NaN,
+      "h_error": NaN,
+      "beta_error": NaN,
+      "mode_detection_percent": {
+        "mode0": 8.333333333333334,
+        "mode1": 0.0,
+        "mode2": 0.0
+      },
+      "mode_detected": {
+        "mode0": 2,
+        "mode1": 0,
+        "mode2": 0
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 17,
+        "mode2": 9
+      },
+      "median_pick_error_mps": {
+        "mode0": 257.32106721548155,
+        "mode1": null,
+        "mode2": null
+      },
+      "false_pick_percent": 89.47368421052632
+    },
+    {
+      "case": "thick_3p8m",
+      "h_true": 3.8,
+      "beta_true": 1120.0,
+      "image": "finite_difference_image",
+      "method": "global_tracking",
+      "observation_count": 50,
+      "h_est": 5.5,
+      "beta_est": 1213.7913595378905,
+      "h_error": 1.7000000000000002,
+      "beta_error": 93.79135953789046,
+      "mode_detection_percent": {
+        "mode0": 20.833333333333332,
+        "mode1": 11.764705882352942,
+        "mode2": 11.11111111111111
+      },
+      "mode_detected": {
+        "mode0": 5,
+        "mode1": 2,
+        "mode2": 1
+      },
+      "mode_possible": {
+        "mode0": 24,
+        "mode1": 17,
+        "mode2": 9
+      },
+      "median_pick_error_mps": {
+        "mode0": 36.64920713890206,
+        "mode1": 20.876065514557695,
+        "mode2": 13.217487392862495
+      },
+      "false_pick_percent": 80.95238095238095
+    }
+  ],
+  "summary": {
+    "analytical_image": {
+      "independent_peaks": {
+        "h_mae": null,
+        "beta_mae": null,
+        "mode_detection_percent": {
+          "mode0": 98.48484848484848,
+          "mode1": 100.0,
+          "mode2": 59.25925925925926
+        },
+        "false_pick_percent": 46.455549215692166
+      },
+      "greedy_tracking": {
+        "h_mae": null,
+        "beta_mae": null,
+        "mode_detection_percent": {
+          "mode0": 90.15151515151514,
+          "mode1": 87.78280542986425,
+          "mode2": 51.85185185185185
+        },
+        "false_pick_percent": 12.596105619361433
+      },
+      "global_tracking": {
+        "h_mae": 2.5347239075520833,
+        "beta_mae": 107.27162852382828,
+        "mode_detection_percent": {
+          "mode0": 81.94444444444446,
+          "mode1": 100.0,
+          "mode2": 0.0
+        },
+        "false_pick_percent": 46.4353448275862
+      }
+    },
+    "finite_difference_image": {
+      "independent_peaks": {
+        "h_mae": null,
+        "beta_mae": null,
+        "mode_detection_percent": {
+          "mode0": 47.47474747474747,
+          "mode1": 9.04977375565611,
+          "mode2": 3.7037037037037037
+        },
+        "false_pick_percent": 79.7146621034333
+      },
+      "greedy_tracking": {
+        "h_mae": null,
+        "beta_mae": null,
+        "mode_detection_percent": {
+          "mode0": 8.712121212121213,
+          "mode1": 0.0,
+          "mode2": 0.0
+        },
+        "false_pick_percent": 90.7188703465982
+      },
+      "global_tracking": {
+        "h_mae": 2.25,
+        "beta_mae": 76.6613798143228,
+        "mode_detection_percent": {
+          "mode0": 21.08585858585859,
+          "mode1": 9.04977375565611,
+          "mode2": 3.7037037037037037
+        },
+        "false_pick_percent": 84.33862433862434
+      }
+    }
+  }
+}

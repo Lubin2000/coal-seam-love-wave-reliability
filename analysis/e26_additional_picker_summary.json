@@ -1,0 +1,38 @@
+{
+  "independent_peaks": {
+    "mode_detection_percent": {
+      "mode0": 60.62562065541211,
+      "mode1": 79.57153787299158,
+      "mode2": 93.83954154727793
+    },
+    "false_pick_percent": 47.56372464019421,
+    "median_h_width_90": 0.03425864113564924
+  },
+  "greedy_tracking": {
+    "mode_detection_percent": {
+      "mode0": 83.36643495531281,
+      "mode1": 71.76740627390971,
+      "mode2": 42.12034383954155
+    },
+    "false_pick_percent": 29.501738122827348,
+    "median_h_width_90": 0.038417746821034965
+  },
+  "viterbi_order_tracking": {
+    "mode_detection_percent": {
+      "mode0": 97.16981132075472,
+      "mode1": 92.34889058913542,
+      "mode2": 32.23495702005731
+    },
+    "false_pick_percent": 40.8413815681781,
+    "median_h_width_90": 0.0336077183274323
+  },
+  "component_segmentation": {
+    "mode_detection_percent": {
+      "mode0": 91.50943396226415,
+      "mode1": 88.21729150726856,
+      "mode2": 78.51002865329512
+    },
+    "false_pick_percent": 39.986491050320836,
+    "median_h_width_90": 0.03388110420787317
+  }
+}

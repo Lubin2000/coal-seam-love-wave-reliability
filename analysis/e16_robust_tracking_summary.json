@@ -1,0 +1,80 @@
+{
+  "independent_peaks": {
+    "mode_statistics": {
+      "mode0": {
+        "possible": 2014,
+        "detected": 1221,
+        "detection_percent": 60.62562065541211,
+        "mean_absolute_pick_error_mps": 2.781128254301594
+      },
+      "mode1": {
+        "possible": 1307,
+        "detected": 1040,
+        "detection_percent": 79.57153787299158,
+        "mean_absolute_pick_error_mps": 6.078188485442273
+      },
+      "mode2": {
+        "possible": 698,
+        "detected": 655,
+        "detection_percent": 93.83954154727793,
+        "mean_absolute_pick_error_mps": 12.780917438374717
+      }
+    },
+    "false_pick_percent": 47.56372464019421,
+    "median_h_width_90": 0.03425864113564924,
+    "p90_h_width_90": 0.044885270180693305,
+    "median_beta_width_90": 7.738772464995387
+  },
+  "continuity_tracking": {
+    "mode_statistics": {
+      "mode0": {
+        "possible": 2014,
+        "detected": 1679,
+        "detection_percent": 83.36643495531281,
+        "mean_absolute_pick_error_mps": 2.739137407027
+      },
+      "mode1": {
+        "possible": 1307,
+        "detected": 938,
+        "detection_percent": 71.76740627390971,
+        "mean_absolute_pick_error_mps": 5.036327686041153
+      },
+      "mode2": {
+        "possible": 698,
+        "detected": 294,
+        "detection_percent": 42.12034383954155,
+        "mean_absolute_pick_error_mps": 9.358764231781311
+      }
+    },
+    "false_pick_percent": 29.501738122827348,
+    "median_h_width_90": 0.038417746821034965,
+    "p90_h_width_90": 0.05235180097101323,
+    "median_beta_width_90": 6.309000433097173
+  },
+  "viterbi_order_tracking": {
+    "mode_statistics": {
+      "mode0": {
+        "possible": 2014,
+        "detected": 1957,
+        "detection_percent": 97.16981132075472,
+        "mean_absolute_pick_error_mps": 2.6263005035235123
+      },
+      "mode1": {
+        "possible": 1307,
+        "detected": 1207,
+        "detection_percent": 92.34889058913542,
+        "mean_absolute_pick_error_mps": 4.226004323174005
+      },
+      "mode2": {
+        "possible": 698,
+        "detected": 225,
+        "detection_percent": 32.23495702005731,
+        "mean_absolute_pick_error_mps": 7.504477064867204
+      }
+    },
+    "false_pick_percent": 40.8413815681781,
+    "median_h_width_90": 0.0336077183274323,
+    "p90_h_width_90": 0.04529876602593426,
+    "median_beta_width_90": 6.037622507183542
+  }
+}

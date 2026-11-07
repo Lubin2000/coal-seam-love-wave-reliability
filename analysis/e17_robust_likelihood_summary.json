@@ -1,0 +1,242 @@
+[
+  {
+    "outlier_fraction": 0.0,
+    "include_attenuation": false,
+    "likelihood": "gaussian",
+    "h_rmse": 0.8922759822005647,
+    "h_bias": 0.864968361092742,
+    "beta_rmse": 97.22055083351547,
+    "q_relative_mae": null,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.0,
+    "include_attenuation": false,
+    "likelihood": "huber",
+    "h_rmse": 0.6702355371231017,
+    "h_bias": 0.6266403412051864,
+    "beta_rmse": 62.57010223141401,
+    "q_relative_mae": null,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.0,
+    "include_attenuation": false,
+    "likelihood": "student_t",
+    "h_rmse": 0.5348058562825406,
+    "h_bias": 0.4205178235247561,
+    "beta_rmse": 48.19825365963351,
+    "q_relative_mae": null,
+    "h_coverage_percent": 3.3333333333333335
+  },
+  {
+    "outlier_fraction": 0.0,
+    "include_attenuation": true,
+    "likelihood": "gaussian",
+    "h_rmse": 0.7458096540947472,
+    "h_bias": 0.7167661855238123,
+    "beta_rmse": 74.47325029195073,
+    "q_relative_mae": 0.1483566579714954,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.0,
+    "include_attenuation": true,
+    "likelihood": "huber",
+    "h_rmse": 0.5588565340274064,
+    "h_bias": 0.5080326856244918,
+    "beta_rmse": 44.76265566720799,
+    "q_relative_mae": 0.06349636951845113,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.0,
+    "include_attenuation": true,
+    "likelihood": "student_t",
+    "h_rmse": 0.3237313313304266,
+    "h_bias": 0.18740251871840558,
+    "beta_rmse": 21.612207137215997,
+    "q_relative_mae": 0.030289529680492852,
+    "h_coverage_percent": 10.0
+  },
+  {
+    "outlier_fraction": 0.1,
+    "include_attenuation": false,
+    "likelihood": "gaussian",
+    "h_rmse": 0.8822093450269599,
+    "h_bias": 0.8543156929160102,
+    "beta_rmse": 95.43744190152535,
+    "q_relative_mae": null,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.1,
+    "include_attenuation": false,
+    "likelihood": "huber",
+    "h_rmse": 0.6756637445002492,
+    "h_bias": 0.6356519979987262,
+    "beta_rmse": 63.57835302400515,
+    "q_relative_mae": null,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.1,
+    "include_attenuation": false,
+    "likelihood": "student_t",
+    "h_rmse": 0.5454554506965288,
+    "h_bias": 0.44017038104465095,
+    "beta_rmse": 48.600548961772866,
+    "q_relative_mae": null,
+    "h_coverage_percent": 3.3333333333333335
+  },
+  {
+    "outlier_fraction": 0.1,
+    "include_attenuation": true,
+    "likelihood": "gaussian",
+    "h_rmse": 0.740225439216088,
+    "h_bias": 0.7106667416415756,
+    "beta_rmse": 73.65778534951409,
+    "q_relative_mae": 0.12367706618095255,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.1,
+    "include_attenuation": true,
+    "likelihood": "huber",
+    "h_rmse": 0.5651875295517722,
+    "h_bias": 0.5164977012129269,
+    "beta_rmse": 45.52579139794095,
+    "q_relative_mae": 0.06801007091742478,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.1,
+    "include_attenuation": true,
+    "likelihood": "student_t",
+    "h_rmse": 0.3759991176797329,
+    "h_bias": 0.2328650959074644,
+    "beta_rmse": 26.715591337019955,
+    "q_relative_mae": 0.039222915113790925,
+    "h_coverage_percent": 13.333333333333334
+  },
+  {
+    "outlier_fraction": 0.2,
+    "include_attenuation": false,
+    "likelihood": "gaussian",
+    "h_rmse": 0.9043772213046574,
+    "h_bias": 0.8763546734122355,
+    "beta_rmse": 102.54174669528652,
+    "q_relative_mae": null,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.2,
+    "include_attenuation": false,
+    "likelihood": "huber",
+    "h_rmse": 0.70054503452205,
+    "h_bias": 0.6599524310861604,
+    "beta_rmse": 70.55387197453277,
+    "q_relative_mae": null,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.2,
+    "include_attenuation": false,
+    "likelihood": "student_t",
+    "h_rmse": 0.5475990499636453,
+    "h_bias": 0.45044309768612206,
+    "beta_rmse": 48.65154799340437,
+    "q_relative_mae": null,
+    "h_coverage_percent": 3.3333333333333335
+  },
+  {
+    "outlier_fraction": 0.2,
+    "include_attenuation": true,
+    "likelihood": "gaussian",
+    "h_rmse": 0.7516024899766207,
+    "h_bias": 0.7222704568866879,
+    "beta_rmse": 78.6128842975929,
+    "q_relative_mae": 0.10634348439543571,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.2,
+    "include_attenuation": true,
+    "likelihood": "huber",
+    "h_rmse": 0.5762594193868406,
+    "h_bias": 0.5363084892522618,
+    "beta_rmse": 47.70670746091968,
+    "q_relative_mae": 0.06591910258556871,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.2,
+    "include_attenuation": true,
+    "likelihood": "student_t",
+    "h_rmse": 0.3599220085492359,
+    "h_bias": 0.22219723244976647,
+    "beta_rmse": 22.692392397972434,
+    "q_relative_mae": 0.03867870756438145,
+    "h_coverage_percent": 13.333333333333334
+  },
+  {
+    "outlier_fraction": 0.3,
+    "include_attenuation": false,
+    "likelihood": "gaussian",
+    "h_rmse": 0.8863071447740163,
+    "h_bias": 0.854304146528689,
+    "beta_rmse": 96.52344762891008,
+    "q_relative_mae": null,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.3,
+    "include_attenuation": false,
+    "likelihood": "huber",
+    "h_rmse": 0.7173612599195317,
+    "h_bias": 0.6769975502743558,
+    "beta_rmse": 70.026604290136,
+    "q_relative_mae": null,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.3,
+    "include_attenuation": false,
+    "likelihood": "student_t",
+    "h_rmse": 0.5477246319015826,
+    "h_bias": 0.44181430496263185,
+    "beta_rmse": 49.87105306522796,
+    "q_relative_mae": null,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.3,
+    "include_attenuation": true,
+    "likelihood": "gaussian",
+    "h_rmse": 0.7462321198867218,
+    "h_bias": 0.7126080226522336,
+    "beta_rmse": 75.27057700000036,
+    "q_relative_mae": 0.08563973468953236,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.3,
+    "include_attenuation": true,
+    "likelihood": "huber",
+    "h_rmse": 0.608047332438664,
+    "h_bias": 0.5631094835204219,
+    "beta_rmse": 52.19166723260742,
+    "q_relative_mae": 0.06709541722522579,
+    "h_coverage_percent": 0.0
+  },
+  {
+    "outlier_fraction": 0.3,
+    "include_attenuation": true,
+    "likelihood": "student_t",
+    "h_rmse": 0.3781147935094318,
+    "h_bias": 0.2509858667162455,
+    "beta_rmse": 29.100226745615796,
+    "q_relative_mae": 0.04930042488552209,
+    "h_coverage_percent": 10.0
+  }
+]

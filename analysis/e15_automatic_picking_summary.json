@@ -1,0 +1,41 @@
+{
+  "settings": {
+    "n_models": 50,
+    "pick_tolerance_mps": 35.0,
+    "image_frequency_points": 43,
+    "image_velocity_bins": 240
+  },
+  "picking": {
+    "mode_statistics": {
+      "mode0": {
+        "possible_count": 2014,
+        "detected_count": 1221,
+        "detection_percent": 60.62562065541211,
+        "error_mae_mps": 2.810574994321805,
+        "error_rmse_mps": 4.019627597273026
+      },
+      "mode1": {
+        "possible_count": 1307,
+        "detected_count": 1040,
+        "detection_percent": 79.57153787299158,
+        "error_mae_mps": 6.070315960406273,
+        "error_rmse_mps": 8.677994042163647
+      },
+      "mode2": {
+        "possible_count": 698,
+        "detected_count": 655,
+        "detection_percent": 93.83954154727793,
+        "error_mae_mps": 13.132305456604087,
+        "error_rmse_mps": 15.908585427539203
+      }
+    },
+    "false_pick_percent": 47.56372464019421
+  },
+  "information_after_picking": {
+    "median_h_width_90": 0.03425864113564924,
+    "p90_h_width_90": 0.044885270180693305,
+    "h_accept_percent": 100.0,
+    "median_beta_width_90": 7.738772464995387,
+    "median_q_relative_width_90": 2.138309715036914
+  }
+}

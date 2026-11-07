@@ -1,0 +1,9 @@
+[forward]
+file_model = "coal_model.txt"
+fmin = 60.0
+fmax = 560.0
+nf = 26
+
+[secfunc]
+file_model = "coal_model.txt"
+nc = 10000

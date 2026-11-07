@@ -1,0 +1,66 @@
+{
+  "method": {
+    "wavefield": "2D SH finite difference with first-order constant-Q damping",
+    "mode_estimation": "fundamental-mode f-k ridge filtering followed by trace-RMS amplitude fitting",
+    "low_q_coal": 40.0,
+    "high_q_coal": 300.0,
+    "source_frequencies_hz": [
+      220.0,
+      320.0
+    ],
+    "window_centers_m": [
+      50.0,
+      65.0,
+      80.0,
+      95.0,
+      110.0,
+      125.0,
+      140.0,
+      155.0,
+      170.0
+    ],
+    "window_half_width_m": 18.0,
+    "interpretation": "Exploratory only: the 220-Hz effective-Q estimate is approximate, while 320-Hz mode interference remains significant.",
+    "grid_spacing_m": 0.5,
+    "receiver_count": 100,
+    "receiver_spacing_m": 2.0
+  },
+  "results": [
+    {
+      "source_frequency_hz": 220.0,
+      "h_m": 3.8,
+      "phase_velocity_mps": 1434.3156050712714,
+      "q_low_coal_input": 40.0,
+      "q_high_coal_input": 300.0,
+      "coal_energy_fraction": 0.9356779224868103,
+      "q_low_effective_theory": 41.682313611820106,
+      "q_high_effective_theory": 268.964043562972,
+      "expected_log_slope": -0.00976891462877275,
+      "observed_log_slope": -0.015423363894294587,
+      "naive_estimated_q_low_effective": 27.99126263144422,
+      "relative_q_error_percent": 32.84618773295116,
+      "amplitude_high": "[1.574458731820908e-05, 1.4901768810997131e-05, 1.4443529135412836e-05, 1.3957653448384138e-05, 1.3474679323334459e-05, 1.3009316358859516e-05, 1.2561473879145104e-05, 1.2128593403656645e-05, 1.1704308724506957e-05]",
+      "amplitude_low": "[7.241035289634915e-06, 5.319362043956935e-06, 4.146119888498172e-06, 3.207484393298509e-06, 2.487478371600136e-06, 1.922952248167014e-06, 1.4931948936623242e-06, 1.1558520588887942e-06, 8.988465905084184e-07]",
+      "log_ratio": "[-0.7767324518896507, -1.0301265384396021, -1.2480735733014778, -1.4705410403098118, -1.6895428234359349, -1.9118041094328668, -2.1297164528965564, -2.3507279707841624, -2.566599944729635]",
+      "window_centers_m": "[50.0, 65.0, 80.0, 95.0, 110.0, 125.0, 140.0, 155.0, 170.0]"
+    },
+    {
+      "source_frequency_hz": 320.0,
+      "h_m": 3.8,
+      "phase_velocity_mps": 1248.853692336385,
+      "q_low_coal_input": 40.0,
+      "q_high_coal_input": 300.0,
+      "coal_energy_fraction": 0.9821003752570274,
+      "q_low_effective_theory": 40.45472900377585,
+      "q_high_effective_theory": 290.685209989838,
+      "expected_log_slope": -0.017129167954291574,
+      "observed_log_slope": -0.0222679871432822,
+      "naive_estimated_q_low_effective": 32.15152175837942,
+      "relative_q_error_percent": 20.524688830869326,
+      "amplitude_high": "[1.7230905968130475e-05, 1.632456031852569e-05, 1.5602580068570516e-05, 1.4823280758453185e-05, 1.4059927777077595e-05, 1.3368998664255914e-05, 1.2718639716316989e-05, 1.2083643481418374e-05, 1.1465187532044241e-05]",
+      "amplitude_low": "[5.538580878472665e-06, 3.7369995399041684e-06, 2.602293964067453e-06, 1.7829942577327906e-06, 1.227019144317575e-06, 8.404177125441146e-07, 5.819880854855369e-07, 3.99169801528059e-07, 2.760907017005015e-07]",
+      "log_ratio": "[-1.1349663211880618, -1.474387714400218, -1.791042939684085, -2.117904850772264, -2.438740981455996, -2.7667947279951415, -3.0843739147868936, -3.4102211446119437, -3.726341110994437]",
+      "window_centers_m": "[50.0, 65.0, 80.0, 95.0, 110.0, 125.0, 140.0, 155.0, 170.0]"
+    }
+  ]
+}

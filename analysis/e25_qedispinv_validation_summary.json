@@ -1,0 +1,301 @@
+{
+  "summary": {
+    "software": "QEDispInv",
+    "upstream_commit": "ed1b5dd7",
+    "compiler": "GCC 16.2.0 UCRT64",
+    "build_options": {
+      "USE_OPENMP": false
+    },
+    "model": {
+      "h_m": 2.4,
+      "beta_coal_mps": 1120.0,
+      "roof_thickness_m": 100.0,
+      "note": "The finite 100-m roof approximates an upper half-space. QEDispInv also returns free-surface roof modes; each analytical coal mode is matched to its nearest independently computed root."
+    },
+    "frequency_range_hz": [
+      100.0,
+      560.0
+    ],
+    "modal_observations": 34,
+    "median_absolute_error_mps": 0.47732148014551967,
+    "mean_absolute_error_mps": 0.9721721967713861,
+    "p95_absolute_error_mps": 2.582098157940366,
+    "max_absolute_error_mps": 9.104309879382072,
+    "within_1_mps": 27,
+    "within_10_mps": 34
+  },
+  "rows": [
+    {
+      "frequency_hz": 100.0,
+      "mode": 0,
+      "analytical_velocity_mps": 2399.971909879382,
+      "qedisp_velocity_mps": 2390.8676,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 9.104309879382072
+    },
+    {
+      "frequency_hz": 120.0,
+      "mode": 0,
+      "analytical_velocity_mps": 2395.6278762292914,
+      "qedisp_velocity_mps": 2392.3848,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 3.243076229291546
+    },
+    {
+      "frequency_hz": 140.0,
+      "mode": 0,
+      "analytical_velocity_mps": 2382.7413868887515,
+      "qedisp_velocity_mps": 2380.5152000000003,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 2.226186888751272
+    },
+    {
+      "frequency_hz": 160.0,
+      "mode": 0,
+      "analytical_velocity_mps": 2357.1661217789033,
+      "qedisp_velocity_mps": 2355.0224000000003,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 2.143721778903
+    },
+    {
+      "frequency_hz": 180.0,
+      "mode": 0,
+      "analytical_velocity_mps": 2310.5199844553863,
+      "qedisp_velocity_mps": 2309.0625,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 1.4574844553862931
+    },
+    {
+      "frequency_hz": 200.0,
+      "mode": 0,
+      "analytical_velocity_mps": 2230.242074757085,
+      "qedisp_velocity_mps": 2229.6661000000004,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.575974757084623
+    },
+    {
+      "frequency_hz": 220.0,
+      "mode": 0,
+      "analytical_velocity_mps": 2107.592704441482,
+      "qedisp_velocity_mps": 2107.2986,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.2941044414819771
+    },
+    {
+      "frequency_hz": 240.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1955.6928938648493,
+      "qedisp_velocity_mps": 1955.7458000000001,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.05290613515080622
+    },
+    {
+      "frequency_hz": 260.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1807.0391461825448,
+      "qedisp_velocity_mps": 1807.9176,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.8784538174552381
+    },
+    {
+      "frequency_hz": 280.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1683.1147875580714,
+      "qedisp_velocity_mps": 1683.8611,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.7463124419286942
+    },
+    {
+      "frequency_hz": 300.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1586.5237421233815,
+      "qedisp_velocity_mps": 1586.6682,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.14445787661861687
+    },
+    {
+      "frequency_hz": 320.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1512.215545083568,
+      "qedisp_velocity_mps": 1512.6585,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.4429549164319724
+    },
+    {
+      "frequency_hz": 340.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1454.5392385186747,
+      "qedisp_velocity_mps": 1454.8417,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.30246148132528106
+    },
+    {
+      "frequency_hz": 360.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1409.0610111157857,
+      "qedisp_velocity_mps": 1409.6680999999999,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.6070888842141358
+    },
+    {
+      "frequency_hz": 380.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1372.593546005971,
+      "qedisp_velocity_mps": 1373.1408000000001,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.5472539940292336
+    },
+    {
+      "frequency_hz": 380.0,
+      "mode": 1,
+      "analytical_velocity_mps": 2397.078088154197,
+      "qedisp_velocity_mps": 2395.1848,
+      "qedisp_native_mode": 1,
+      "absolute_error_mps": 1.8932881541968527
+    },
+    {
+      "frequency_hz": 400.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1342.885447140975,
+      "qedisp_velocity_mps": 1343.2823,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.3968528590251026
+    },
+    {
+      "frequency_hz": 400.0,
+      "mode": 1,
+      "analytical_velocity_mps": 2386.3423134195173,
+      "qedisp_velocity_mps": 2386.3273999999997,
+      "qedisp_native_mode": 1,
+      "absolute_error_mps": 0.014913419517597504
+    },
+    {
+      "frequency_hz": 420.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1318.3364757763043,
+      "qedisp_velocity_mps": 1318.6813,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.34482422369569576
+    },
+    {
+      "frequency_hz": 420.0,
+      "mode": 1,
+      "analytical_velocity_mps": 2365.011570860208,
+      "qedisp_velocity_mps": 2363.4591,
+      "qedisp_native_mode": 1,
+      "absolute_error_mps": 1.5524708602079045
+    },
+    {
+      "frequency_hz": 440.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1297.792511956141,
+      "qedisp_velocity_mps": 1298.3042,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.511688043859067
+    },
+    {
+      "frequency_hz": 440.0,
+      "mode": 1,
+      "analytical_velocity_mps": 2327.8492771900137,
+      "qedisp_velocity_mps": 2327.2677000000003,
+      "qedisp_native_mode": 1,
+      "absolute_error_mps": 0.5815771900133768
+    },
+    {
+      "frequency_hz": 460.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1280.4068791233199,
+      "qedisp_velocity_mps": 1280.8086999999998,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.4018208766799489
+    },
+    {
+      "frequency_hz": 460.0,
+      "mode": 1,
+      "analytical_velocity_mps": 2268.540911993917,
+      "qedisp_velocity_mps": 2268.1605999999997,
+      "qedisp_native_mode": 1,
+      "absolute_error_mps": 0.3803119939170756
+    },
+    {
+      "frequency_hz": 480.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1265.547718601359,
+      "qedisp_velocity_mps": 1265.7113,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.16358139864087207
+    },
+    {
+      "frequency_hz": 480.0,
+      "mode": 1,
+      "analytical_velocity_mps": 2184.7681310927937,
+      "qedisp_velocity_mps": 2184.4473,
+      "qedisp_native_mode": 1,
+      "absolute_error_mps": 0.32083109279392374
+    },
+    {
+      "frequency_hz": 500.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1252.735758028306,
+      "qedisp_velocity_mps": 1253.1316,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.3958419716939261
+    },
+    {
+      "frequency_hz": 500.0,
+      "mode": 1,
+      "analytical_velocity_mps": 2083.768165792045,
+      "qedisp_velocity_mps": 2084.6709,
+      "qedisp_native_mode": 1,
+      "absolute_error_mps": 0.9027342079552909
+    },
+    {
+      "frequency_hz": 520.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1241.601948639634,
+      "qedisp_velocity_mps": 1241.7394,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.13745136036595795
+    },
+    {
+      "frequency_hz": 520.0,
+      "mode": 1,
+      "analytical_velocity_mps": 1979.1482038573345,
+      "qedisp_velocity_mps": 1979.9236,
+      "qedisp_native_mode": 1,
+      "absolute_error_mps": 0.7753961426656133
+    },
+    {
+      "frequency_hz": 540.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1231.8581698581215,
+      "qedisp_velocity_mps": 1232.2687999999998,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.4106301418783005
+    },
+    {
+      "frequency_hz": 540.0,
+      "mode": 1,
+      "analytical_velocity_mps": 1881.7933906606368,
+      "qedisp_velocity_mps": 1882.4531,
+      "qedisp_native_mode": 1,
+      "absolute_error_mps": 0.6597093393631894
+    },
+    {
+      "frequency_hz": 560.0,
+      "mode": 0,
+      "analytical_velocity_mps": 1223.2766364008294,
+      "qedisp_velocity_mps": 1223.603,
+      "qedisp_native_mode": 0,
+      "absolute_error_mps": 0.3263635991706906
+    },
+    {
+      "frequency_hz": 560.0,
+      "mode": 1,
+      "analytical_velocity_mps": 1796.3688801628482,
+      "qedisp_velocity_mps": 1796.4857000000002,
+      "qedisp_native_mode": 1,
+      "absolute_error_mps": 0.1168198371519793
+    }
+  ]
+}

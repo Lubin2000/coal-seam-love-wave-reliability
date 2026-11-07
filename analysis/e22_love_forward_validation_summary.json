@@ -1,0 +1,206 @@
+{
+  "method": {
+    "wavefield": "2D SH heterogeneous finite difference",
+    "dispersion_transform": "normalized phase-shift coherence",
+    "analytical": "three-layer Love secular equation",
+    "transfer_matrix": "independent Haskell-Thomson state transfer",
+    "source_frequencies_hz": [
+      240.0,
+      400.0
+    ],
+    "receiver_count": 100,
+    "receiver_spacing_m": 2.0,
+    "receiver_start_offset_m": 20.0,
+    "grid_spacing_m": 0.5,
+    "record_length_s": 0.32,
+    "model_length_m": 300.0,
+    "validation_frequencies_hz": [
+      100.0,
+      120.0,
+      140.0,
+      160.0,
+      180.0,
+      200.0,
+      220.0,
+      240.0,
+      260.0,
+      280.0,
+      300.0,
+      320.0,
+      340.0,
+      360.0,
+      380.0,
+      400.0,
+      420.0,
+      440.0,
+      460.0,
+      480.0,
+      500.0,
+      520.0,
+      540.0,
+      560.0
+    ]
+  },
+  "aggregate_wavefield_validation": {
+    "fundamental": {
+      "predicted_frequency_points": 70,
+      "detected_frequency_points": 29,
+      "detection_percent": 41.42857142857143,
+      "median_detected_velocity_error_mps": 36.64920713890206,
+      "max_detected_velocity_error_mps": 301.0516973474946
+    },
+    "first_higher": {
+      "predicted_frequency_points": 34,
+      "detected_frequency_points": 8,
+      "detection_percent": 23.529411764705884,
+      "median_detected_velocity_error_mps": 20.384522242285698,
+      "max_detected_velocity_error_mps": 47.493132680082
+    },
+    "second_higher": {
+      "predicted_frequency_points": 11,
+      "detected_frequency_points": 5,
+      "detection_percent": 45.45454545454545,
+      "median_detected_velocity_error_mps": 16.869786951358037,
+      "max_detected_velocity_error_mps": 42.31412089133073
+    }
+  },
+  "banded_wavefield_validation": {
+    "100-240_hz": {
+      "fundamental": {
+        "predicted": 22,
+        "detected": 6
+      },
+      "first_higher": {
+        "predicted": 1,
+        "detected": 0
+      },
+      "second_higher": {
+        "predicted": 0,
+        "detected": 0
+      }
+    },
+    "260-400_hz": {
+      "fundamental": {
+        "predicted": 24,
+        "detected": 13
+      },
+      "first_higher": {
+        "predicted": 13,
+        "detected": 1
+      },
+      "second_higher": {
+        "predicted": 1,
+        "detected": 0
+      }
+    },
+    "420-560_hz": {
+      "fundamental": {
+        "predicted": 24,
+        "detected": 10
+      },
+      "first_higher": {
+        "predicted": 20,
+        "detected": 7
+      },
+      "second_higher": {
+        "predicted": 10,
+        "detected": 5
+      }
+    }
+  },
+  "cases": [
+    {
+      "case": "thin_1p8m",
+      "h_true_m": 1.8,
+      "root_validation": {
+        "frequency_points": 24,
+        "mode_count_matches": 23,
+        "mode_count_match_percent": 95.83333333333333
+      },
+      "wavefield_validation": {
+        "predicted_by_mode": {
+          "fundamental": 22,
+          "first_higher": 4,
+          "second_higher": 0
+        },
+        "detected_by_mode": {
+          "fundamental": 9,
+          "first_higher": 1,
+          "second_higher": 0
+        },
+        "detection_percent_by_mode": {
+          "fundamental": 40.90909090909091,
+          "first_higher": 25.0,
+          "second_higher": 0.0
+        },
+        "median_pick_error_by_mode": {
+          "fundamental": 65.35803539707706,
+          "first_higher": 108.85400917375455,
+          "second_higher": NaN
+        }
+      }
+    },
+    {
+      "case": "medium_2p8m",
+      "h_true_m": 2.8,
+      "root_validation": {
+        "frequency_points": 24,
+        "mode_count_matches": 23,
+        "mode_count_match_percent": 95.83333333333333
+      },
+      "wavefield_validation": {
+        "predicted_by_mode": {
+          "fundamental": 24,
+          "first_higher": 13,
+          "second_higher": 2
+        },
+        "detected_by_mode": {
+          "fundamental": 11,
+          "first_higher": 4,
+          "second_higher": 1
+        },
+        "detection_percent_by_mode": {
+          "fundamental": 45.833333333333336,
+          "first_higher": 30.76923076923077,
+          "second_higher": 50.0
+        },
+        "median_pick_error_by_mode": {
+          "fundamental": 42.22109933522029,
+          "first_higher": 59.47896230458173,
+          "second_higher": 267.07840621009586
+        }
+      }
+    },
+    {
+      "case": "thick_3p8m",
+      "h_true_m": 3.8,
+      "root_validation": {
+        "frequency_points": 24,
+        "mode_count_matches": 24,
+        "mode_count_match_percent": 100.0
+      },
+      "wavefield_validation": {
+        "predicted_by_mode": {
+          "fundamental": 24,
+          "first_higher": 17,
+          "second_higher": 9
+        },
+        "detected_by_mode": {
+          "fundamental": 9,
+          "first_higher": 3,
+          "second_higher": 4
+        },
+        "detection_percent_by_mode": {
+          "fundamental": 37.5,
+          "first_higher": 17.647058823529413,
+          "second_higher": 44.44444444444444
+        },
+        "median_pick_error_by_mode": {
+          "fundamental": 39.02928483438632,
+          "first_higher": 63.69007149300478,
+          "second_higher": 19.150731753266882
+        }
+      }
+    }
+  ]
+}

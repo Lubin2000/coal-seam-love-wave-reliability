@@ -1,0 +1,84 @@
+# Coal-seam Love-wave mode reliability analysis
+
+This repository contains the code, synthetic results, figures and manuscript
+materials for a controlled study of higher-mode Love-wave information,
+automatic dispersion tracking, robust inversion and interval reliability in a
+three-layer coal-seam model.
+
+**Author:** Lu Bin  
+**Affiliation:** Wenzhou University of Technology, Wenzhou, Zhejiang, China  
+**Corresponding email:** lubin2000@163.com  
+**Funding:** National Natural Science Foundation of China, Grant No. 41974209
+
+## Scientific scope
+
+- The study is entirely analytical or synthetic.
+- No field-data accuracy or mine-scale validation is claimed.
+- Analytical modal identity is fixed by physical order \(n=0,1,2\). Roots are
+  not reordered by phase velocity at each frequency.
+- The main inversion uses a first-order energy-weighted modal-Q model.
+- A five-mechanism SLS forward check is quantified at a 280-Hz source
+  frequency over material fits spanning 80-550 Hz.
+
+## Repository layout
+
+```text
+analysis/       Core Python scripts and their numerical outputs
+paper/          Current manuscript, figures, references and evidence reports
+docs/           Licensing, third-party and release documentation
+run_core_experiments.ps1
+requirements.txt
+CITATION.cff
+```
+
+## Environment
+
+Tested on Windows with Python 3.13 and NumPy 2.x.
+
+```powershell
+py -m pip install -r requirements.txt
+```
+
+The complete finite-difference validation takes several minutes. To redraw
+figures from existing results:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run_core_experiments.ps1 -FiguresOnly
+```
+
+To rerun all analytical and inversion experiments while skipping the expensive
+wavefields:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run_core_experiments.ps1 -SkipWavefields
+```
+
+To rerun everything:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run_core_experiments.ps1
+```
+
+## Current manuscript
+
+`paper/manuscript_en_v0.3.md`
+
+## License
+
+- Original software code is licensed under the MIT License. See
+  `LICENSE-CODE`.
+- Original data, figures and documentation are licensed under CC BY 4.0. See
+  `LICENSE-DATA`.
+
+Third-party material is excluded. See `LICENSE.md` and `docs/THIRD_PARTY.md`.
+
+## Publication status
+
+The repository is a pre-release v0.3.0 package. A public repository URL and
+the Zenodo archive DOI will be added after release.
+
+## Third-party software
+
+QEDispInv is not redistributed in this repository. Its input configuration,
+reference output and build notes are included for audit. See
+`docs/THIRD_PARTY.md`.

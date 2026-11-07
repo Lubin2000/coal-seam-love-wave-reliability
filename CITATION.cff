@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code or its synthetic results, cite the associated manuscript and the archived software release."
+type: software
+title: "Coal-seam Love-wave mode reliability analysis"
+version: "0.3.0"
+date-released: "2026-11-06"
+license: MIT
+license-url: "https://opensource.org/license/mit"
+authors:
+  - family-names: "Lu"
+    given-names: "Bin"
+    affiliation: "Wenzhou University of Technology, Wenzhou, Zhejiang, China"
+affiliations:
+  - name: "Wenzhou University of Technology"
+    city: "Wenzhou"
+    region: "Zhejiang"
+    country: "CN"
+abstract: "Code and synthetic results for higher-mode Love-wave information, automatic dispersion tracking, robust inversion and interval reliability in coal-seam models."
+keywords:
+  - coal-seam channel waves
+  - Love waves
+  - higher modes
+  - dispersion
+  - attenuation
+  - uncertainty quantification
+  - reproducible research

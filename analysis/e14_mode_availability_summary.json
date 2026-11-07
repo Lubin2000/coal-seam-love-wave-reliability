@@ -1,0 +1,72 @@
+{
+  "settings": {
+    "n_models": 100,
+    "mask_replicates": 4,
+    "frequency_hz": [
+      60.0,
+      900.0
+    ]
+  },
+  "mean_mode_availability_percent": {
+    "mode0": 93.6279069767442,
+    "mode1": 60.93023255813953,
+    "mode2": 31.255813953488367
+  },
+  "summary": [
+    {
+      "scenario": "fundamental_only",
+      "median_h_width_90": 0.030945164080359695,
+      "p90_h_width_90": 0.048191651443231044,
+      "h_accept_percent": 100.0,
+      "median_beta_width_90": 5.399757909108622,
+      "median_q_relative_width_90": 0.04714310250216819,
+      "mean_mode0_observations": 106.9625,
+      "mean_mode1_observations": 0.0,
+      "mean_mode2_observations": 0.0
+    },
+    {
+      "scenario": "ideal_all_modes",
+      "median_h_width_90": 0.014549598094754151,
+      "p90_h_width_90": 0.019280763381010625,
+      "h_accept_percent": 100.0,
+      "median_beta_width_90": 3.8571803304700247,
+      "median_q_relative_width_90": 0.03222318950457099,
+      "mean_mode0_observations": 118.72,
+      "mean_mode1_observations": 76.51,
+      "mean_mode2_observations": 38.63
+    },
+    {
+      "scenario": "good_field_multimode",
+      "median_h_width_90": 0.017197764683909704,
+      "p90_h_width_90": 0.023383871353442977,
+      "h_accept_percent": 100.0,
+      "median_beta_width_90": 4.2394032475722945,
+      "median_q_relative_width_90": 0.035809326620906745,
+      "mean_mode0_observations": 112.9275,
+      "mean_mode1_observations": 57.42,
+      "mean_mode2_observations": 15.24
+    },
+    {
+      "scenario": "poor_field_multimode",
+      "median_h_width_90": 0.03548425070217299,
+      "p90_h_width_90": 0.05042430670389066,
+      "h_accept_percent": 100.0,
+      "median_beta_width_90": 6.874128693248986,
+      "median_q_relative_width_90": 0.04181911840658965,
+      "mean_mode0_observations": 65.7725,
+      "mean_mode1_observations": 23.735,
+      "mean_mode2_observations": 3.9975
+    },
+    {
+      "scenario": "poor_phase_only",
+      "median_h_width_90": 0.036932952732045415,
+      "p90_h_width_90": 0.05080233151437062,
+      "h_accept_percent": 100.0,
+      "median_beta_width_90": 6.951219665780127,
+      "median_q_relative_width_90": 2.138309715036914,
+      "mean_mode0_observations": 32.8925,
+      "mean_mode1_observations": 11.93,
+      "mean_mode2_observations": 2.0475
+    }
+  ]
+}
