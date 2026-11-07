@@ -16,5 +16,6 @@
 
 The manuscript is a pre-release draft. Author, affiliation and funding fields
 are complete. Original code is MIT-licensed and original data, figures and
-documentation are CC BY 4.0. A public repository URL and archive DOI must be
-inserted before submission.
+documentation are CC BY 4.0. The code repository is
+<https://github.com/Lubin2000/coal-seam-love-wave-reliability>. An archive DOI
+must be inserted before submission.

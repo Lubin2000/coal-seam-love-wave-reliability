@@ -10,6 +10,8 @@ three-layer coal-seam model.
 **Corresponding email:** lubin2000@163.com  
 **Funding:** National Natural Science Foundation of China, Grant No. 41974209
 
+**Public repository:** <https://github.com/Lubin2000/coal-seam-love-wave-reliability>
+
 ## Scientific scope
 
 - The study is entirely analytical or synthetic.
@@ -74,8 +76,10 @@ Third-party material is excluded. See `LICENSE.md` and `docs/THIRD_PARTY.md`.
 
 ## Publication status
 
-The repository is a pre-release v0.3.0 package. A public repository URL and
-the Zenodo archive DOI will be added after release.
+The repository is public at
+<https://github.com/Lubin2000/coal-seam-love-wave-reliability>. The current
+software version is v0.3.0. A persistent Zenodo archive DOI will be added after
+the versioned release is deposited.
 
 ## Third-party software
 

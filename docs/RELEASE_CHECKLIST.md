@@ -8,8 +8,8 @@
 - [x] Add final `LICENSE-CODE` and `LICENSE-DATA`.
 - [x] Run all analytical, tracking, inversion, calibration and bootstrap experiments from the repository root.
 - [x] Verify manuscripts, tables and all eight SVG figures.
-- [ ] Create an initial Git commit.
-- [ ] Push to `coal-seam-love-wave-reliability`.
+- [x] Create an initial Git commit.
+- [x] Push to `coal-seam-love-wave-reliability`.
 - [ ] Enable the repository in Zenodo.
 - [ ] Publish GitHub release `v0.3.0`.
 - [ ] Record the Zenodo DOI in `README.md`, `CITATION.cff` and the manuscript.

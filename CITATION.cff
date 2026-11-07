@@ -6,6 +6,7 @@ version: "0.3.0"
 date-released: "2026-11-06"
 license: MIT
 license-url: "https://opensource.org/license/mit"
+repository-code: "https://github.com/Lubin2000/coal-seam-love-wave-reliability"
 authors:
   - family-names: "Lu"
     given-names: "Bin"
