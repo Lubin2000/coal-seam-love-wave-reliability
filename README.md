@@ -1,5 +1,7 @@
 # Coal-seam Love-wave mode reliability analysis
 
+[![DOI](https://zenodo.org/badge/1449400437.svg)](https://doi.org/10.5281/zenodo.24054133)
+
 This repository contains the code, synthetic results, figures and manuscript
 materials for a controlled study of higher-mode Love-wave information,
 automatic dispersion tracking, robust inversion and interval reliability in a
@@ -11,6 +13,9 @@ three-layer coal-seam model.
 **Funding:** National Natural Science Foundation of China, Grant No. 41974209
 
 **Public repository:** <https://github.com/Lubin2000/coal-seam-love-wave-reliability>
+
+**Version DOI (v0.3.0):** <https://doi.org/10.5281/zenodo.24054134>  
+**Concept DOI (all versions):** <https://doi.org/10.5281/zenodo.24054133>
 
 ## Scientific scope
 
@@ -77,9 +82,9 @@ Third-party material is excluded. See `LICENSE.md` and `docs/THIRD_PARTY.md`.
 ## Publication status
 
 The repository is public at
-<https://github.com/Lubin2000/coal-seam-love-wave-reliability>. The current
-software version is v0.3.0. A persistent Zenodo archive DOI will be added after
-the versioned release is deposited.
+<https://github.com/Lubin2000/coal-seam-love-wave-reliability>. Version v0.3.0
+is archived at <https://doi.org/10.5281/zenodo.24054134>. The concept DOI
+<https://doi.org/10.5281/zenodo.24054133> identifies the version family.
 
 ## Third-party software
 

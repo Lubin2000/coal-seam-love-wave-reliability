@@ -533,7 +533,7 @@ The analytical forward model, independent transfer-matrix solver, 2D SH finite-d
 
 ## Data and Code Availability
 
-The public repository is available at https://github.com/Lubin2000/coal-seam-love-wave-reliability. It contains one-command generation of the synthetic experiments, fixed random seeds, figure scripts, numerical outputs and a documented software environment. Original software is licensed under the MIT License. Original data, figures and documentation are licensed under CC BY 4.0. A persistent archive DOI will be inserted after the Zenodo release.
+The public repository is available at https://github.com/Lubin2000/coal-seam-love-wave-reliability. It contains one-command generation of the synthetic experiments, fixed random seeds, figure scripts, numerical outputs and a documented software environment. Version v0.3.0 is archived at https://doi.org/10.5281/zenodo.24054134, and the concept DOI for all versions is https://doi.org/10.5281/zenodo.24054133. Original software is licensed under the MIT License. Original data, figures and documentation are licensed under CC BY 4.0.
 
 All numerical results in this study are analytical or synthetic. No field data or third-party article PDFs are redistributed. QEDispInv is treated as an external dependency; its source code and binaries are not included in the release.
 

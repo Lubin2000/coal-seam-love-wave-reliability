@@ -7,6 +7,14 @@ date-released: "2026-11-06"
 license: MIT
 license-url: "https://opensource.org/license/mit"
 repository-code: "https://github.com/Lubin2000/coal-seam-love-wave-reliability"
+doi: "10.5281/zenodo.24054134"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24054134"
+    description: "Version-specific DOI for v0.3.0"
+  - type: doi
+    value: "10.5281/zenodo.24054133"
+    description: "Concept DOI for all versions"
 authors:
   - family-names: "Lu"
     given-names: "Bin"

@@ -17,5 +17,5 @@
 The manuscript is a pre-release draft. Author, affiliation and funding fields
 are complete. Original code is MIT-licensed and original data, figures and
 documentation are CC BY 4.0. The code repository is
-<https://github.com/Lubin2000/coal-seam-love-wave-reliability>. An archive DOI
-must be inserted before submission.
+<https://github.com/Lubin2000/coal-seam-love-wave-reliability>. Version v0.3.0
+is archived at <https://doi.org/10.5281/zenodo.24054134>.

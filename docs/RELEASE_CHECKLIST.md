@@ -10,7 +10,7 @@
 - [x] Verify manuscripts, tables and all eight SVG figures.
 - [x] Create an initial Git commit.
 - [x] Push to `coal-seam-love-wave-reliability`.
-- [ ] Enable the repository in Zenodo.
-- [ ] Publish GitHub release `v0.3.0`.
-- [ ] Record the Zenodo DOI in `README.md`, `CITATION.cff` and the manuscript.
-- [ ] Create a final DOI-bearing archive and verify its downloaded contents.
+- [x] Enable the repository in Zenodo.
+- [x] Publish GitHub release `v0.3.0`.
+- [x] Record the Zenodo DOI in `README.md`, `CITATION.cff` and the manuscript.
+- [x] Verify the archived record, version metadata, related GitHub tag, and ZIP file.

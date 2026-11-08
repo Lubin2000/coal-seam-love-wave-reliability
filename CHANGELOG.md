@@ -4,6 +4,8 @@
 
 - Adopted MIT for original software and CC BY 4.0 for original data, figures,
   and documentation.
+- Public release archived by Zenodo: version DOI
+  `10.5281/zenodo.24054134`; concept DOI `10.5281/zenodo.24054133`.
 - Fixed analytical mode ordering so that modes 0, 1 and 2 retain their physical
   branch identity across cutoff frequencies.
 - Updated the tracker, information analysis, robust inversion and calibration
