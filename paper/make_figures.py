@@ -43,6 +43,8 @@ def save(name, width, height, body):
         '<style>text{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;}</style>'
         f"{body}</svg>"
     )
+    (OUT / name).write_text(svg, encoding="utf-8")
+
     replacements = {
         "图1  多模态槽波信息保留与稳健拾取流程": "Figure 1. Multimodal information retention and robust picking workflow",
         "三层煤层模型": "Three-layer model",
@@ -81,20 +83,29 @@ def save(name, width, height, body):
     for source, target in replacements.items():
         english = english.replace(source, target)
     english = re.sub(r"伪拾取 ([0-9.]+)%", r"False picks \1%", english)
-    figure_title = {
-        "fig1_workflow": "Figure 1. Multimodal information retention and robust picking workflow",
-        "fig2_information_budget": "Figure 2. Thickness information budget for different observation designs",
-        "fig3_mode_picking": "Figure 3. Automatic detection of fundamental and higher-mode branches",
-        "fig4_robust_likelihood": "Figure 4. Thickness robustness under automatic modal picking",
-        "fig5_calibration": "Figure 5. Simulated interval coverage",
-        "fig8_sls_attenuation": "Figure 8. Viscoelastic Love-wave attenuation check",
-    }[Path(name).stem]
+    # The manuscript supplies the figure caption; do not duplicate it inside
+    # the artwork.
     english = re.sub(
-        r'(<text x="34\.0" y="34\.0"[^>]*>).*?(</text>)',
-        lambda match: match.group(1) + figure_title + match.group(2),
+        r'<text x="[^"]+" y="34\.0"[^>]*>.*?</text>',
+        "",
         english,
         count=1,
     )
+
+    def readable_font(match):
+        size = float(match.group(1))
+        if size <= 10:
+            size = 16
+        elif size < 12:
+            size = 18
+        elif size < 14:
+            size = 19
+        elif size < 18:
+            size = 21
+        return f'font-size="{size:g}"'
+
+    english = re.sub(r'font-size="([0-9.]+)"', readable_font, english)
+    english = english.replace("#66727d", "#48545d")
     english = english.replace(
         '"Microsoft YaHei","Noto Sans SC",Arial,sans-serif',
         'Arial,"Liberation Sans",sans-serif',
@@ -161,8 +172,8 @@ def figure_information():
         "c0_c1_group_q": "多阶 + 群速度 + 衰减",
     }
     width, height = 1000, 430
-    left, top = 190, 60
-    plot_width, row_height = 720, 45
+    left, top = 255, 60
+    plot_width, row_height = 655, 45
     maximum = max(row["median_h_width_90"] for row in data) * 1.15
     body = [text(34, 34, "\u56fe2  \u4e0d\u540c\u89c2\u6d4b\u7ec4\u5408\u7684\u539a\u5ea6\u4fe1\u606f\u9884\u7b97", 18, 600)]
     body.append(text(left, 78, "理论 90% 厚度区间中位数 / m", 11, 400, COLORS["muted"]))
@@ -614,8 +625,71 @@ def _linear_fit(x_values, y_values):
     return slope, mean_y - slope * mean_x
 
 
+def figure_workflow_english():
+    width, height = 1100, 320
+    labels = (
+        ("Model", "h / Vs / Q"),
+        ("Forward", "Dispersion / Q"),
+        ("Images", "Noise and gaps"),
+        ("Tracking", "Fixed mode slots"),
+        ("Inversion", "Robust likelihood"),
+        ("Reliability", "Coverage / width"),
+    )
+    box_width, gap = 150, 25
+    body = [
+        '<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" '
+        'markerWidth="5" markerHeight="5" orient="auto-start-reverse">'
+        '<path d="M0 0 L10 5 L0 10 z" fill="#8fa7a5"/></marker></defs>'
+    ]
+    for index, (title, subtitle) in enumerate(labels):
+        x = 25 + index * (box_width + gap)
+        body.append(
+            f'<rect x="{x}" y="58" width="{box_width}" height="150" '
+            'rx="12" fill="#ffffff" stroke="#cdd5d4"/>'
+        )
+        body.append(text(x + box_width / 2, 116, title, 22, 600, anchor="middle"))
+        body.append(
+            text(
+                x + box_width / 2,
+                158,
+                subtitle,
+                18,
+                500,
+                "#48545d",
+                "middle",
+            )
+        )
+        if index < len(labels) - 1:
+            body.append(
+                f'<path d="M{x + box_width + 5} 133 '
+                f'L{x + box_width + gap - 5} 133" '
+                'stroke="#8fa7a5" stroke-width="2" '
+                'marker-end="url(#arrow)"/>'
+            )
+    body.append(
+        text(
+            550,
+            272,
+            "Synthetic benchmark; field validation remains future work.",
+            19,
+            500,
+            "#48545d",
+            "middle",
+        )
+    )
+    svg = (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" '
+        f'height="{height}" viewBox="0 0 {width} {height}" role="img">'
+        f'<rect width="100%" height="100%" fill="{COLORS["paper"]}"/>'
+        '<style>text{font-family:Arial,"Liberation Sans",sans-serif;}</style>'
+        + "".join(body)
+        + "</svg>"
+    )
+    (OUT / "fig1_workflow_en.svg").write_text(svg, encoding="utf-8")
+
+
 def main():
-    figure_workflow()
+    figure_workflow_english()
     figure_information()
     figure_picking()
     figure_robustness()

@@ -376,21 +376,21 @@ Conformal calibration can therefore be either ineffective or technically valid b
 
 The analytical and transfer-matrix mode counts agree exactly at 70 of 72 model-frequency combinations. Of the 70 combinations with at least one trapped mode, 68 have identical non-empty mode sets; where the sets match, phase-velocity roots agree to numerical precision. The two count mismatches occur near a high-velocity boundary, where one solver returns a root at the edge of the trapped-mode interval and the other does not.
 
-The finite-difference fields do not illuminate every theoretical mode at every frequency. Using the strict guided-peak criterion, 29 of 70 fundamental-mode predictions, 8 of 34 first-higher predictions and 5 of 11 second-higher predictions are matched. The aggregate detection percentages are 41.4%, 23.5% and 45.5%, respectively. This does not mean that the other modes are absent from the wavefield. It means that their phase coherence is not strong enough to form an unambiguous guided peak for this source-receiver geometry. Detection is strongly band-dependent: in the 420-560 Hz band, 10 of 24 fundamental, 7 of 20 first-higher and 5 of 10 second-higher predictions are matched, whereas the 260-400 Hz band matches only 1 of 13 first-higher predictions.
+The finite-difference fields do not illuminate every theoretical mode at every frequency. Using the strict guided-peak criterion, 20 of 70 fundamental-mode predictions, 6 of 34 first-higher predictions and 2 of 11 second-higher predictions are matched. The aggregate detection percentages are 28.6%, 17.6% and 18.2%, respectively. This does not mean that the other modes are absent from the wavefield. It means that their phase coherence is not strong enough to form an unambiguous guided peak for this source-receiver geometry. Detection is strongly band-dependent: in the 420-560 Hz band, 16 of 24 fundamental, 5 of 20 first-higher and 2 of 10 second-higher predictions are matched, whereas no fundamental or higher mode is matched below 240 Hz.
 
-Among matched peaks, the median absolute phase-velocity errors are 36.6 m/s for the fundamental mode, 20.4 m/s for the first higher mode and 16.9 m/s for the second higher mode. The maximum fundamental-mode error reaches 301 m/s at low frequencies, where the receiver aperture covers only a few wavelengths and leakage into the roof and floor is strong.
+Among matched peaks, the median absolute phase-velocity errors are 16.6 m/s for the fundamental mode, 31.5 m/s for the first higher mode and 8.2 m/s for the second higher mode. The maximum matched fundamental-mode error is 44.5 m/s.
 
 These finite-difference detection rates are not directly comparable to the 93.6%, 60.9% and 31.3% mode-availability rates used in the main synthetic-image experiment. The latter describe frequency-wise mode presence before automatic picking, whereas the finite-difference test additionally includes source spectrum, geometric spreading, leakage, finite aperture and beamforming coherence. The difference between the two illustrates the distinction between mode existence and survey observability.
 
 ![Figure 6](figures/fig6_wavefield_validation.svg)
 
-**Figure 6.** Phase-shift coherence extracted from independent 2D SH finite-difference fields for 1.8-, 2.8- and 3.8-m seams. Background colours show normalized phase-shift coherence, lines show analytical roots and circles denote matched guided peaks.
+**Figure 6.** Phase-shift coherence extracted from independent 2D SH finite-difference fields for 1.8-, 2.8- and 3.8-m seams. Background colours show normalized phase-shift coherence, lines show analytical roots and circles denote matched guided peaks. The image retains both modal and nonmodal coherent energy; a high-coherence patch is therefore not assumed to represent the nearest theoretical branch, and missing overlap along a line is part of the detection result.
 
 | Seam model | Root count matches | Fundamental detected | First higher detected | Second higher detected |
 |---|---:|---:|---:|---:|
-| 1.8 m | 23/24 | 9/22 | 1/4 | 0/0 |
-| 2.8 m | 23/24 | 11/24 | 4/13 | 1/2 |
-| 3.8 m | 24/24 | 9/24 | 3/17 | 4/9 |
+| 1.8 m | 23/24 | 6/22 | 0/4 | 0/0 |
+| 2.8 m | 23/24 | 8/24 | 4/13 | 0/2 |
+| 3.8 m | 24/24 | 6/24 | 2/17 | 2/9 |
 
 This validation has two implications. First, the analytical dispersion implementation is consistent with an independent layered-media formulation. Second, higher modes are real features of the wavefield but have strongly frequency-dependent observability. A theoretical mode therefore cannot be treated as an available observation until source spectrum, aperture, leakage and local coherence are considered. The present wavefield test does not include attenuation inversion, three-dimensional source radiation or roadways; it is an independent forward check, not a field-data validation.
 
@@ -398,9 +398,9 @@ This validation has two implications. First, the analytical dispersion implement
 
 We also passed the independent phase-shift images directly to the same three tracking strategies used above and inverted the global-tracked picks for thickness and shear velocity. The comparison used analytical images generated on the same frequency-velocity grid with modal ridges, a false ridge and random noise.
 
-For analytical images, the fixed-slot global tracker detected 81.9%, 100.0% and 0.0% of modes 0, 1 and 2, with a 46.4% false-pick rate. For finite-difference images, the corresponding rates fell to 21.1%, 9.0% and 3.7%, with an 84.3% false-pick rate. Greedy tracking detected only 8.7% of fundamental finite-difference picks.
+For analytical images, the fixed-slot global tracker detected 81.9%, 100.0% and 0.0% of modes 0, 1 and 2, with a 46.4% false-pick rate. For finite-difference images, the corresponding rates fell to 11.5%, 4.5% and 0.0%, with a 90.8% false-pick rate. Greedy tracking detected only 10.1% of fundamental finite-difference picks.
 
-The global-track inversion over the three analytical images produced thickness and velocity MAEs of 2.53 m and 107.3 m/s. The finite-difference images produced 2.25 m and 76.7 m/s. The lower velocity MAE for the three finite-difference cases is not evidence of superior performance: too few modes were retained for a stable three-parameter interpretation, and mode-label errors can compensate in a fit. The result reinforces the need to validate branch identity before applying linearized uncertainty.
+The global-track inversion over the three analytical images produced thickness and velocity MAEs of 2.53 m and 107.3 m/s. The finite-difference images produced 2.47 m and 159.4 m/s. The lower thickness MAE for the three finite-difference cases is not evidence of superior performance: too few modes were retained for a stable three-parameter interpretation, and mode-label errors can compensate in a fit. The much larger velocity error reinforces the need to validate branch identity before applying linearized uncertainty.
 
 This end-to-end test gives an important negative result. The order constraint improves continuity relative to greedy tracking, but broad ridges, multiple local peaks on one ridge, body-wave energy and mode-label changes across gaps remain severe. The detection and inversion metrics obtained from controlled synthetic images are therefore optimistic for direct application to raw wavefield-derived images.
 

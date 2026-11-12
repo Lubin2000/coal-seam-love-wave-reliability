@@ -2,7 +2,7 @@
 
 ## Current manuscript
 
-`manuscript_en_v0.3.md`
+`manuscript_en_v0.4.md`
 
 ## Execution order
 

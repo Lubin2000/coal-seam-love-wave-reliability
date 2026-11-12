@@ -17,6 +17,12 @@ E22 demonstrated that analytical Love branches produce coherent peaks in a finit
 
 The inversion used a broad global search followed by local refinement. It did not use the true thickness to initialize the search.
 
+The finite-difference images were regenerated after correcting the phase-shift
+coherence operator. The earlier image calculation discarded the observed
+complex spectrum and therefore did not measure dispersion phase coherence.
+They also use 200 receivers at 1-m spacing to avoid spatial aliasing of the
+slow fundamental branch.
+
 ## Tracking results
 
 | Image | Tracker | Mode 0 | Mode 1 | Mode 2 | False picks |
@@ -24,16 +30,16 @@ The inversion used a broad global search followed by local refinement. It did no
 | Analytical | Independent peaks | 98.5% | 100.0% | 59.3% | 46.5% |
 | Analytical | Greedy | 90.2% | 87.8% | 51.9% | 12.6% |
 | Analytical | Global | 81.9% | 100.0% | 0.0% | 46.4% |
-| Finite difference | Independent peaks | 47.5% | 9.0% | 3.7% | 79.7% |
-| Finite difference | Greedy | 8.7% | 0.0% | 0.0% | 90.7% |
-| Finite difference | Global | 21.1% | 9.0% | 3.7% | 84.3% |
+| Finite difference | Independent peaks | 27.1% | 8.8% | 0.0% | 87.1% |
+| Finite difference | Greedy | 5.7% | 0.0% | 0.0% | 90.7% |
+| Finite difference | Global | 18.6% | 8.8% | 0.0% | 87.3% |
 
 ## Global-track inversion
 
 | Image | Thickness MAE | Shear-velocity MAE |
 |---|---:|---:|
 | Analytical images | 2.53 m | 107.3 m/s |
-| Finite-difference images | 2.25 m | 76.7 m/s |
+| Finite-difference images | 2.22 m | 57.5 m/s |
 
 The finite-difference velocity MAE is not evidence of better performance: too few modes were retained for a stable three-parameter interpretation, and mode-label errors can compensate for one another in a fit.
 

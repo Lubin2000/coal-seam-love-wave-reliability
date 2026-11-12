@@ -14,8 +14,10 @@ three-layer coal-seam model.
 
 **Public repository:** <https://github.com/Lubin2000/coal-seam-love-wave-reliability>
 
-**Version DOI (v0.3.0):** <https://doi.org/10.5281/zenodo.24054134>  
-**Concept DOI (all versions):** <https://doi.org/10.5281/zenodo.24054133>
+**Previous version DOI (v0.3.0):** <https://doi.org/10.5281/zenodo.24054134>  
+**Concept DOI (all versions):** <https://doi.org/10.5281/zenodo.24054133>  
+**Current version:** v0.4.0, which corrects the independent phase-shift image
+calculation. Its version DOI will be added after archival.
 
 ## Scientific scope
 
@@ -32,6 +34,7 @@ three-layer coal-seam model.
 ```text
 analysis/       Core Python scripts and their numerical outputs
 paper/          Current manuscript, figures, references and evidence reports
+paper/jse_submission/  Current Journal of Seismic Exploration upload package
 docs/           Licensing, third-party and release documentation
 run_core_experiments.ps1
 requirements.txt
@@ -68,7 +71,9 @@ powershell -ExecutionPolicy Bypass -File .\run_core_experiments.ps1
 
 ## Current manuscript
 
-`paper/manuscript_en_v0.3.md`
+`paper/manuscript_en_v0.4.md`
+
+The current submission package is in `paper/jse_submission/`.
 
 ## License
 
@@ -83,7 +88,9 @@ Third-party material is excluded. See `LICENSE.md` and `docs/THIRD_PARTY.md`.
 
 The repository is public at
 <https://github.com/Lubin2000/coal-seam-love-wave-reliability>. Version v0.3.0
-is archived at <https://doi.org/10.5281/zenodo.24054134>. The concept DOI
+remains archived at <https://doi.org/10.5281/zenodo.24054134>. Version v0.4.0
+corrects the phase-shift coherence implementation and is the release candidate
+for the submitted manuscript. The concept DOI
 <https://doi.org/10.5281/zenodo.24054133> identifies the version family.
 
 ## Third-party software

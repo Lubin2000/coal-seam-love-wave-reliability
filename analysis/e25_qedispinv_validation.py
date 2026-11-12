@@ -56,9 +56,7 @@ def make_svg(rows: list[dict]) -> str:
         '<rect width="100%" height="100%" fill="#f8f9f7"/>',
         '<style>text{font-family:Arial,"Liberation Sans",sans-serif;}'
         '.grid{stroke:#e1e6e5;stroke-width:1}.axis{stroke:#aeb9bb;fill:none}</style>',
-        '<text x="28" y="32" font-size="20" font-weight="600" fill="#18222c">'
-        "QEDispInv cross-check for coal-seam Love modes</text>",
-        '<text x="28" y="52" font-size="12" fill="#66727d">'
+        '<text x="28" y="28" font-size="16" fill="#48545d">'
         "Lines: analytical roots; circles: independently computed QEDispInv roots</text>",
         f'<rect x="{left}" y="{top}" width="{plot_width}" height="{plot_height}" class="axis"/>',
     ]
@@ -67,14 +65,14 @@ def make_svg(rows: list[dict]) -> str:
         body.append(f'<path d="M{left} {y:.1f} H{left + plot_width}" class="grid"/>')
         body.append(
             f'<text x="{left - 10}" y="{y + 4:.1f}" text-anchor="end" '
-            f'font-size="10" fill="#66727d">{velocity}</text>'
+            f'font-size="16" fill="#48545d">{velocity}</text>'
         )
     for frequency in (100, 200, 300, 400, 500):
         x = x_map(frequency)
         body.append(f'<path d="M{x:.1f} {top} V{top + plot_height}" class="grid"/>')
         body.append(
             f'<text x="{x:.1f}" y="{top + plot_height + 17}" '
-            f'text-anchor="middle" font-size="10" fill="#66727d">{frequency}</text>'
+            f'text-anchor="middle" font-size="16" fill="#48545d">{frequency}</text>'
         )
 
     for mode in MODES:
@@ -107,15 +105,15 @@ def make_svg(rows: list[dict]) -> str:
         x = left + 580 + index * 70
         body.append(f'<circle cx="{x}" cy="398" r="4" fill="{COLORS[mode]}"/>')
         body.append(
-            f'<text x="{x + 9}" y="402" font-size="11" fill="#18222c">mode {mode}</text>'
+            f'<text x="{x + 9}" y="402" font-size="16" fill="#18222c">mode {mode}</text>'
         )
     body.extend(
         [
             f'<text x="{left + plot_width / 2:.1f}" y="427" text-anchor="middle" '
-            'font-size="11" fill="#66727d">Frequency (Hz)</text>',
+            'font-size="16" fill="#48545d">Frequency (Hz)</text>',
             f'<text x="16" y="{top + plot_height / 2:.1f}" '
             f'transform="rotate(-90 16 {top + plot_height / 2:.1f})" '
-            'text-anchor="middle" font-size="11" fill="#66727d">Phase velocity (m/s)</text>',
+            'text-anchor="middle" font-size="16" fill="#48545d">Phase velocity (m/s)</text>',
         ]
     )
     return (

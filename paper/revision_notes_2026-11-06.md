@@ -29,9 +29,10 @@ Candidate peaks are separated before dynamic programming to prevent several mino
 - `e18_robust_posterior_calibration.py`
 - `e18_robust_posterior_calibration_runs.csv`
 - `e18_robust_posterior_calibration_summary.json`
-- `paper/figures/fig3_mode_picking_en.svg`
-- `paper/figures/fig4_robust_likelihood_en.svg`
-- `paper/figures/fig5_calibration_en.svg`
+- `paper1/figures/fig3_mode_picking_en.svg`
+- `paper1/figures/fig4_robust_likelihood_en.svg`
+- `paper1/figures/fig5_calibration_en.svg`
+- `paper1/manuscript_en_v0.1.md`
 
 ## Updated principal results
 
@@ -112,8 +113,8 @@ change the reference phase velocity. The five-mechanism fit has approximately
 - `e28_sls_attenuation_validation.csv`
 - `e28_sls_attenuation_validation_summary.json`
 - `e28_sls_wavefields.npz`
-- `paper/figures/fig8_sls_attenuation_en.svg`
-- `paper/manuscript_en_v0.3.md`
+- `paper1/figures/fig8_sls_attenuation_en.svg`
+- `paper1/manuscript_en_v0.3.md`
 
 The previous v0.2 draft is retained for audit, but its numerical results are
 superseded where they depend on analytical mode indices or SLS attenuation.
@@ -125,3 +126,62 @@ superseded where they depend on analytical mode indices or SLS attenuation.
 - Corresponding email: lubin2000@163.com.
 - Funding: National Natural Science Foundation of China, Grant No. 41974209.
 - Author contribution: sole-author CRediT statement added.
+- License: MIT for original software; CC BY 4.0 for original data, figures and documentation.
+- Public repository: https://github.com/Lubin2000/coal-seam-love-wave-reliability.
+- Version DOI: https://doi.org/10.5281/zenodo.24054134.
+- Concept DOI: https://doi.org/10.5281/zenodo.24054133.
+
+## v0.4 correction: phase-shift coherence implementation
+
+### Detected defect
+
+A visual audit of Figure 6 showed that high-coherence background patches did
+not consistently coincide with the analytical dispersion branches. Numerical
+inspection showed that this was not solely a display issue. The
+`phase_shift_image` routine extracted the complex receiver spectrum but then
+discarded its phase:
+
+```python
+amplitude = np.abs(trace_spectrum)
+weighted = amplitude * offset_window
+```
+
+The subsequent steering sum therefore measured an amplitude taper rather than
+the phase coherence of the wavefield.
+
+After restoring the complex spectrum, a second issue was identified. NumPy's
+positive-frequency FFT convention gives inter-trace phase `exp(+ikx)` for a
+wave propagating in +x. The steering operator must therefore use
+`exp(-ik'x)`, not `exp(+ik'x)`.
+
+A third issue was spatial aliasing. With 2-m receiver spacing, the spatial
+Nyquist condition cannot represent the slow fundamental branch at the upper
+end of the tested band. The receiver spacing was reduced to 1 m while
+retaining the 200-m aperture, increasing the trace count from 100 to 200.
+
+### Corrected implementation
+
+The image now uses:
+
+```python
+weighted = trace_spectrum[active] * offset_window[active]
+phasor = np.exp(-1j * 2.0 * np.pi * frequency * x / velocity)
+coherence = abs(np.sum(weighted * phasor)) / np.sum(abs(weighted))
+```
+
+### Regenerated results
+
+- Fundamental detection: 7/70 (10.0%).
+- First-higher detection: 3/34 (8.8%).
+- Second-higher detection: 0/11 (0.0%).
+- Median matched velocity errors: 17.9 and 23.7 m/s for modes 0 and 1.
+- Finite-difference global tracking: 18.6%, 8.8% and 0.0%.
+- Finite-difference mean false-pick rate: 87.3%.
+- Finite-difference thickness and velocity MAE: 2.22 m and 57.5 m/s.
+
+Figure 6 is retained as a negative result: coherent high-amplitude energy can
+arise from nonmodal or leaky arrivals, and not every analytical branch forms a
+resolved coherence ridge. The figure caption now states this explicitly.
+
+The archived software release v0.3.0 predates this correction. A new v0.4
+release and DOI are required before submission.

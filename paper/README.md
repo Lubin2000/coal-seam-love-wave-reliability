@@ -1,7 +1,11 @@
 # Manuscript materials
 
-- `manuscript_en_v0.3.md`: current English research draft.
+- `manuscript_en_v0.4.md`: current English research draft with corrected
+  phase-shift validation.
 - `figures/`: the eight figures referenced by the manuscript.
+- `figures/supp_figS1_phase_shift_coherence_raw.svg`: raw phase-shift
+  coherence diagnostic retained as Supplementary Figure S1; it contains strong
+  nonmodal energy and is not the main modal-detection figure.
 - `references.bib`: BibTeX reference library.
 - `revision_notes_2026-11-06.md`: audit trail of algorithmic corrections and
   regenerated results.
@@ -17,5 +21,6 @@
 The manuscript is a pre-release draft. Author, affiliation and funding fields
 are complete. Original code is MIT-licensed and original data, figures and
 documentation are CC BY 4.0. The code repository is
-<https://github.com/Lubin2000/coal-seam-love-wave-reliability>. Version v0.3.0
-is archived at <https://doi.org/10.5281/zenodo.24054134>.
+<https://github.com/Lubin2000/coal-seam-love-wave-reliability>. Version v0.4.0
+is the corrected release candidate; the concept DOI is
+<https://doi.org/10.5281/zenodo.24054133>.

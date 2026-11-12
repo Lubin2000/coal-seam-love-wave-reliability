@@ -31,27 +31,38 @@ This check shows that the modal branches in the main paper are not an artifact o
 - Three seam thicknesses: 1.8, 2.8 and 3.8 m.
 - Coal shear velocity: 1120 m/s.
 - Roof and floor shear velocities: 2400 and 2650 m/s.
-- Receivers: 100, spaced at 2 m, starting 20 m from the source.
+- Receivers: 200, spaced at 1 m, starting 20 m from the source.
 - Record length: 0.32 s.
 - Sources: Ricker wavelets centered at 240 and 400 Hz.
 
 Dispersion was extracted using a normalized phase-shift coherence transform. A predicted mode was counted as observed when a local coherence maximum fell within a frequency-dependent aperture-limited tolerance and passed coherence and contrast thresholds. This is a guided validation against analytical curves, not a blind picking benchmark.
 
+The transform retains the observed complex receiver spectrum and applies the
+steering factor `exp(-i 2 pi f x / c)`, consistent with NumPy's
+positive-frequency FFT convention for a wave propagating in the positive
+`x` direction. An earlier implementation that used only receiver amplitudes
+without the observed phase was removed before producing these results.
+
+The receiver spacing was reduced from 2 to 1 m while preserving the 200-m
+aperture. At 500 Hz, 2-m sampling cannot represent phase velocities below
+approximately 2 km/s without spatial aliasing, which affected the slow
+fundamental branch across much of the tested band.
+
 ### Results
 
 | Mode | Predicted frequency points | Strictly matched | Detection | Median matched velocity error |
 |---|---:|---:|---:|---:|
-| Fundamental | 70 | 29 | 41.4% | 36.6 m/s |
-| First higher | 34 | 8 | 23.5% | 20.4 m/s |
-| Second higher | 11 | 5 | 45.5% | 16.9 m/s |
+| Fundamental | 70 | 7 | 10.0% | 17.9 m/s |
+| First higher | 34 | 3 | 8.8% | 23.7 m/s |
+| Second higher | 11 | 0 | 0.0% | N/A |
 
 Detection improves in the higher-frequency band:
 
 | Band | Fundamental | First higher | Second higher |
 |---|---:|---:|---:|
-| 100-240 Hz | 6/22 | 0/1 | 0/0 |
-| 260-400 Hz | 13/24 | 1/13 | 0/1 |
-| 420-560 Hz | 10/24 | 7/20 | 5/10 |
+| 100-240 Hz | 0/22 | 0/1 | 0/0 |
+| 260-400 Hz | 0/24 | 0/13 | 0/1 |
+| 420-560 Hz | 7/24 | 3/20 | 0/10 |
 
 The finite-difference fields therefore contain coherent fundamental and higher Love branches, but not every theoretical mode is equally observable. Weak low-frequency modes are affected by source spectrum, leakage into the roof and floor, and finite receiver aperture. The strict detection percentages should not be interpreted as probabilities that a mode physically exists.
 
@@ -108,7 +119,7 @@ approximation, not a frequency-dependent Q inversion or a field calibration.
 - `e28_sls_attenuation_validation.py`
 - `e28_sls_attenuation_validation_summary.json`
 - `e28_sls_wavefields.npz`
-- `paper/figures/fig6_wavefield_validation.svg`
-- `paper/figures/fig8_sls_attenuation_en.svg`
+- `paper1/figures/fig6_wavefield_validation.svg`
+- `paper1/figures/fig8_sls_attenuation_en.svg`
 
 Runtime on the current Windows environment is approximately 100-110 s for all three models and two source frequencies.

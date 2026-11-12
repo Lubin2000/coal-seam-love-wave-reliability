@@ -64,6 +64,33 @@ model predicts an effective Q of 40.92, while the paired SLS wavefield gives
 37.35, an 8.7% difference. This is a forward consistency check, not a
 broadband Q inversion or a field calibration.
 
+## 5. Independent phase-shift image correction
+
+A manual audit of Figure 6 exposed two errors in the earlier phase-shift
+coherence implementation:
+
+1. The image multiplied receiver amplitudes by the trial steering phasor but
+   omitted the observed complex trace spectrum. The image therefore primarily
+   represented an amplitude taper rather than dispersion coherence.
+2. After restoring the complex spectrum, the steering sign was inconsistent
+   with NumPy's positive-frequency FFT convention.
+
+The corrected transform keeps the complex spectrum and applies
+`exp(-i 2 pi f x / c)`. The independent-wavefield results were regenerated:
+
+- Fundamental: 7/70 strict detections (10.0%).
+- First higher: 3/34 strict detections (8.8%).
+- Second higher: 0/11 strict detections (0.0%).
+- Median matched velocity error: 17.9 and 23.7 m/s for the first two modes.
+
+The corrected finite-difference images were also passed through the
+end-to-end tracker. Global tracking detected 18.6%, 8.8% and 0.0% of modes
+0-2 at an 87.3% mean false-pick rate, with thickness and velocity MAEs of
+2.22 m and 57.5 m/s.
+
+These results supersede the Figure 6 and end-to-end values in archived
+software version v0.3.0.
+
 ## Artifacts
 
 - `e26_additional_picker_baseline.py`

@@ -38,6 +38,11 @@ if (-not $FiguresOnly) {
     }
 }
 
+& py (Join-Path $PSScriptRoot "paper\make_figure6_detection.py")
+if ($LASTEXITCODE -ne 0) {
+    throw "Figure 6 detection generation failed with exit code $LASTEXITCODE"
+}
+
 & py (Join-Path $PSScriptRoot "paper\make_figures.py")
 if ($LASTEXITCODE -ne 0) {
     throw "Figure generation failed with exit code $LASTEXITCODE"

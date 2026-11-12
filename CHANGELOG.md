@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.0 - 2026-11-10
+
+- Corrected the independent phase-shift coherence calculation to retain the
+  observed complex receiver spectrum.
+- Corrected the steering-sign convention for NumPy's positive-frequency FFT.
+- Corrected Figure 6 velocity-cell coordinate mapping.
+- Regenerated the independent-wavefield and end-to-end tracking results.
+- Added manuscript v0.4 and the JSE submission package.
+
 ## 0.3.0 - 2026-11-06
 
 - Adopted MIT for original software and CC BY 4.0 for original data, figures,

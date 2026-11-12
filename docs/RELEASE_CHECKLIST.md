@@ -14,3 +14,14 @@
 - [x] Publish GitHub release `v0.3.0`.
 - [x] Record the Zenodo DOI in `README.md`, `CITATION.cff` and the manuscript.
 - [x] Verify the archived record, version metadata, related GitHub tag, and ZIP file.
+
+## Version 0.4.0 correction release
+
+- [x] Correct phase retention and steering sign in the phase-shift transform.
+- [x] Correct Figure 6 velocity-cell mapping.
+- [x] Rerun independent-wavefield and end-to-end experiments.
+- [x] Regenerate the manuscript, Word files and PDFs.
+- [x] Add the JSE submission package under `paper/jse_submission/`.
+- [ ] Commit and push the v0.4.0 repository changes.
+- [ ] Publish GitHub release `v0.4.0`.
+- [ ] Record the new version DOI in the README, CITATION and manuscript.

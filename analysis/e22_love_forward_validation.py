@@ -42,8 +42,8 @@ BETA_FLOOR = 2650.0
 RHO_FLOOR = 2600.0
 SEAM_TOP = 24.0
 DX = 0.5
-RECEIVER_SPACING = 2.0
-RECEIVER_COUNT = 100
+RECEIVER_SPACING = 1.0
+RECEIVER_COUNT = 200
 RECEIVER_START_OFFSET = 20.0
 TOTAL_TIME = 0.32
 X_MAX = 300.0
@@ -144,14 +144,19 @@ def phase_shift_image(
         active = weights > 0.03 * max(float(np.max(weights)), 1e-12)
         if not np.any(active):
             continue
-        phase = np.angle(trace_spectrum[active])
-        weighted = weights[active]
+        # Keep the observed complex spectrum. Using only its amplitude here
+        # discards phase and turns the image into an amplitude taper rather
+        # than a phase-shift coherence spectrum.
+        weighted = trace_spectrum[active] * offset_window[active]
         x = offsets[active]
         for velocity_index, velocity in enumerate(velocities):
-            phasor = np.exp(1j * 2.0 * math.pi * frequency * x / velocity)
+            # With NumPy's positive-frequency FFT convention, a wave
+            # propagating in +x has inter-trace phase exp(+ikx). The steering
+            # operator therefore uses exp(-ik'x).
+            phasor = np.exp(-1j * 2.0 * math.pi * frequency * x / velocity)
             image[frequency_index, velocity_index] = abs(
                 np.sum(weighted * phasor)
-            ) / max(float(np.sum(weighted)), 1e-12)
+            ) / max(float(np.sum(np.abs(weighted))), 1e-12)
     return VAL_FREQUENCIES, velocities, image
 
 
@@ -413,7 +418,9 @@ def make_svg(
         color_limit = max(float(np.quantile(display_image, 0.995)), 0.01)
         row_count, column_count = display_image.shape
         cell_width = panel_width / row_count
-        cell_height = panel_height / column_count
+        velocity_step = float(
+            display_velocities[1] - display_velocities[0]
+        )
         for frequency_index in range(row_count):
             for velocity_index in range(column_count):
                 intensity = min(
@@ -429,15 +436,14 @@ def make_svg(
                 green = int(249 - 133 * intensity)
                 blue = int(247 - 128 * intensity)
                 velocity = float(display_velocities[velocity_index]) - 0.5 * (
-                    display_velocities[1] - display_velocities[0]
+                    velocity_step
                 )
-                cell_y = y_map(
-                    velocity
-                    + (display_velocities[1] - display_velocities[0])
-                )
+                cell_top = y_map(velocity + velocity_step)
+                cell_bottom = y_map(velocity)
+                cell_height = cell_bottom - cell_top
                 body.append(
                     f'<rect x="{x_offset + frequency_index * cell_width:.1f}" '
-                    f'y="{cell_y:.1f}" width="{cell_width + 0.2:.1f}" '
+                    f'y="{cell_top:.1f}" width="{cell_width + 0.2:.1f}" '
                     f'height="{cell_height + 0.2:.1f}" '
                     f'fill="rgb({red},{green},{blue})" stroke="none"/>'
                 )
@@ -622,7 +628,7 @@ def main() -> None:
         svg,
         encoding="utf-8",
     )
-    paper_figure_directory = ROOT.parent / "paper" / "figures"
+    paper_figure_directory = ROOT / "paper1" / "figures"
     paper_figure_directory.mkdir(parents=True, exist_ok=True)
     (paper_figure_directory / "fig6_wavefield_validation.svg").write_text(
         svg,
